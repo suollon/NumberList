@@ -12,14 +12,14 @@ import java.util.List;
 public class NumberListTest {
 	
 	//此处考虑原始数据数量大于等于2个时的情况;
-	//系统给定的值sum;(调整sum的值已测试,sum>0;)
+	//系统给定的值sum;(调整sum的值以测试,sum>0;)
 //	public static double sum = 70;
-	public static double sum = 150.2;
+	public static double sum = 69;
 	
 	public static void main(String[] args) {
 		//准备数据;
 		List<Double> oldList = new ArrayList<Double>();
-		for (Double i = 93.0; i > 0; i=i-5) {
+		for (Double i = 93.2; i > 0; i=i-5) {
 			oldList.add(i);
 		}
 		
@@ -71,8 +71,8 @@ public class NumberListTest {
 	 * 3.如何从n个数中随机抽取m个;
 	 */
 	public static void getAnswer(Object[] oldArray){
-		List<Double> sumList = new ArrayList<Double>();
-		List<Integer[]> keyList = new ArrayList<Integer[]>();
+		List<Double> sumList = new LinkedList<Double>();
+		List<Integer[]> keyList = new LinkedList<Integer[]>();
 		Object[] newArray = newArray(oldArray);
 		int n = newArray.length;
 		//共有(Math.pow(2,n)-1)个组合方式;
